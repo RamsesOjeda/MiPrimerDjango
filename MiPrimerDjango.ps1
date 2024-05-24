@@ -1,16 +1,11 @@
 # Ubicando en la carpeta de proyecto
-cd D:\romPy\MiPrimerDjango
+cd D:\romPy\MiPrimerDjango\MiPrimerDjango
 # Verificar el directorio
 pwd
-# Iniciar directorio git
-# git init
-git remote add origin https://github.com/RamsesOjeda/MiPrimerDjango.git
 # Generar un entorno virtual en mi proyecto
-python -m venv MiPrimerDjango
+python -m venv General
 # Abriendo el entorno virtual
-MiPrimerDjango\Scripts\activate.ps1
-# Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
-deactivate
+General\Scripts\activate.ps1
 # Comprobar python
 python --version
 # Programas instalados
@@ -20,8 +15,10 @@ python -m pip install --upgrade pip
 # Programas instalados
 pip list
 # # Visualizar los paquetes
-# cat requirements.txt
+cat requirements.txt
 # Instalando paqutes requeridos. Correr solo la primera vez
 pip install -r requirements.txt
 # Programas instalados
 pip list
+# Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
+deactivate
