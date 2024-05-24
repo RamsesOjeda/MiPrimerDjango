@@ -41,5 +41,22 @@ django-admin startproject Cuestionarios
 ls
 # Cambiamos a Cuestionarios que se acaba de crear.
 cd Cuestionarios
+# Comprobación de que corre el servidor
+py manage.py runserver
+###############################################
+# Para salir hay que teclear Ctrl + c
+# Cada vez que quieras que se vea tienes que dejar este servidor prendido
+###############################################
+# Verificar la ruta
+pwd
+# listar los archivos
+ls
+# Crea la aplicación polls
+py manage.py startapp polls
+# Se modifica los archivos polls/views.py, se crea el archivo polls/urls.py
+# de la aplicacion de polls
+# Se modifica el archivo Cuestionarios/urls.py del proyecto Cuestionarios
+# Se corre el servidor para poder ver el resultado
+py manage.py runserver
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
