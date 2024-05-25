@@ -61,7 +61,7 @@ py manage.py runserver
 # Se configura la informacion del servidor postgresSQL antes de migrar el 
 # modelo ya que necesita esta configuración para generar la base de datos
 # y su modelo.
-
-
+# Migra el modelo para crear la base de datos y el modelo de datos.
+py manage.py migrate
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
