@@ -75,9 +75,13 @@ WSGI_APPLICATION = 'Cuestionarios.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cuestionarios',
+        'USER': 'postgres',
+        'PASSWORD': 'ramy1826',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT': '5632'
+        }
 }
 
 
@@ -103,11 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 

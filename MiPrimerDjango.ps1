@@ -58,5 +58,10 @@ py manage.py startapp polls
 # Se modifica el archivo Cuestionarios/urls.py del proyecto Cuestionarios
 # Se corre el servidor para poder ver el resultado
 py manage.py runserver
+# Se configura la informacion del servidor postgresSQL antes de migrar el 
+# modelo ya que necesita esta configuración para generar la base de datos
+# y su modelo.
+
+
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
