@@ -63,5 +63,10 @@ py manage.py runserver
 # y su modelo.
 # Migra el modelo para crear la base de datos y el modelo de datos.
 py manage.py migrate
+# Se genera el modelo de la app Polls en polls/models.py y se agrega a la 
+# configuración del proyecto cuestionario en el archivo settings.py la
+# aplicación polls en INSTALLED_APPS al projecto polls polls.apps.PollsConfig
+# Migra el modelo de la app Polls
+py manage.py makemigrations polls
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
