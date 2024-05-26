@@ -66,7 +66,17 @@ py manage.py migrate
 # Se genera el modelo de la app Polls en polls/models.py y se agrega a la 
 # configuración del proyecto cuestionario en el archivo settings.py la
 # aplicación polls en INSTALLED_APPS al projecto polls polls.apps.PollsConfig
-# Migra el modelo de la app Polls
+# Migra el modelo de la app Polls al proyecto Cuestionarios
 py manage.py makemigrations polls
+# Este comando te indica la ruta donde quedan registrados los cambios 
+# de la migración en este caso polls/migrations/0001_initial.py
+# Para visualizar las migraciones podemos usar un comando que muestra
+# el código que se generara para la migración en sql.
+py manage.py sqlmigrate polls 0001
+# también éxiste un comando para checar problemas.
+py manage.py check
+# No mando problemas continuamos con la migración del modelo a la base 
+# de datos de polls.
+
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
