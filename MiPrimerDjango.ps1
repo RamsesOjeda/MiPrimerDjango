@@ -186,6 +186,27 @@ py manage.py shell
 # >>> c = q.choice_set.filter(choice_text__startswith="Just hacking")
 # >>> c.delete()
 ###########################################################################
+# Migra el modelo de la app Polls al proyecto Cuestionarios
+py manage.py makemigrations polls
+# Migra el modelo integrado del proyecto al modelo de la
+# base de datos y crea las tablas.
+py manage.py migrate
+# No existen modificaciones. Todos los cambios realizados son de formato o calculo
+# que no impactan la base de datos.
+###########################################################################
+#### Creacion de la administracion. Solo se corre una vez.
+###########################################################################
+# Generemos el super usuario
+python manage.py createsuperuser
+# # usuario
+# admin
+# # mail
+# ramses.ojeda@gmail.com
+# # password
+# pass123456
+# Inicia servidor
+python manage.py runserver
+
 
 # Cerrar entorno. No necesitas referir la ubicacón para desactivarlo.
 deactivate
